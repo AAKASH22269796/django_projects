@@ -28,6 +28,11 @@ ALLOWED_HOSTS = ["*"]
 
 
 
+#SECRET_KEY = 'django-insecure-yju%9vz^ynvv%q_kyinig%^xyl*c#)+nfxnnghxnapd%04s85='
+#SECRET_KEY = 'django-insecure-yju%9vz^ynvv%q_kyinig%^xyl*c#)+nfxnnghxnapd%04s85='
+
+
+
 
 # Application definition
 
