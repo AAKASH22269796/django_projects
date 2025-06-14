@@ -1,4 +1,4 @@
-<!-- myapp/templates/myapp/home.html -->
+<!-- myapp/templates/myapp/home.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,4 +20,80 @@
     <h1>Welcome to My Website!</h1>
     <p>This is your first Django website frontend Aakash.</p>
 </body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e9ecef;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #login-box, #welcome-box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            width: 300px;
+            text-align: center;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #welcome-box {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div id="login-box">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Enter your name" required>
+    <button onclick="showWelcome()">Login</button>
+</div>
+
+<div id="welcome-box">
+    <h2>Welcome to My Website!</h2>
+    <p id="message"></p>
+</div>
+
+<script>
+    function showWelcome() {
+        const name = document.getElementById("username").value.trim();
+        if (name !== "") {
+            document.getElementById("login-box").style.display = "none";
+            document.getElementById("welcome-box").style.display = "block";
+            document.getElementById("message").textContent =
+                `This is your first Django website frontend ${name}.`;
+        } else {
+            alert("Please enter your name.");
+        }
+    }
+</script>
+
+</body>
 </html>
+
